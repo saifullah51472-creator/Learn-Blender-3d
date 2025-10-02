@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn 3D Blender</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #3a0ca3, #7209b7);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 60px 20px;
+      animation: fadeInDown 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ffbe0b;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-top: 40px;
+      color: #ffbe0b;
+      animation: fadeInDown 2s;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 20px auto;
+      line-height: 1.6;
+      animation: fadeInUp 3s ease-in-out;
+    }
+
+    .image-container {
+      margin: 40px auto;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .image-container img {
+      width: 280px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      transform: scale(0.9);
+      transition: 0.4s;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    /* Download button styles */
+    .download-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(45deg, #ffbe0b, #fb5607, #ff006e, #8338ec, #3a86ff);
+      background-size: 300% 300%;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      animation: gradientMove 6s infinite, bounce 2s infinite;
+      transition: transform 0.3s;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background: rgba(0,0,0,0.4);
+    }
+
+    iframe {
+      margin-top: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    /* Tips section */
+    #tips ul {
+      text-align: left;
+    }
+
+    /* Animated Final Message */
+    .final-message {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 60px auto;
+      padding: 20px;
+      background: linear-gradient(90deg, #ffbe0b, #ff006e, #8338ec, #3a86ff);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientText 5s infinite linear, glow 2s infinite alternate;
+      text-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    @keyframes gradientText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #fff, 0 0 20px #ffbe0b, 0 0 30px #ff006e; }
+      100% { text-shadow: 0 0 20px #fff, 0 0 30px #8338ec, 0 0 40px #3a86ff; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Learn 3D Blender</h1>
+    <p>
+      Welcome to the world of 3D creativity! Blender is a powerful, free, and open-source software 
+      for modeling, animation, and rendering. With Blender, you can bring your imagination to life 
+      by creating stunning 3D scenes, characters, and animations. Start your journey today and 
+      unlock your creative potential!
+    </p>
+    <!-- Download Button -->
+    <a href="https://www.blender.org/download/" target="_blank" class="download-btn">
+      ⬇ Download Blender
+    </a>
+  </header>
+
+  <!-- Modeling Section -->
+  <section id="modeling">
+    <h2>🛠 Basic Modeling</h2>
+    <p>Learn the basics of modeling with Blender.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z8sg0nHNTTo" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Editing Section -->
+  <section id="editing">
+    <h2>✂️ Editing</h2>
+    <p>Editing is where you refine your models and add details.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IgQB04NdqEI" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Texturing Section -->
+  <section id="texturing">
+    <h2>🎨 Texturing</h2>
+    <p>Apply materials and textures to bring realism to your 3D models.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/uHCJoNEWjXo" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Animation Section -->
+  <section id="animation">
+    <h2>🎞️ Animation</h2>
+    <p>Bring your 3D creations to life with animations.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/d7-izSQO_-4" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Advanced Section -->
+  <section id="advanced">
+    <h2>🚀 Advanced Blender</h2>
+    <p>Dive deeper into advanced Blender tools and workflows.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4KV28Lkd2DU" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Urdu Section -->
+  <section id="urdu">
+    <h2>🌙 Blender in Urdu</h2>
+    <p>Learn Blender in Urdu for easy understanding.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BgLYKrjgskU" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/z6bxGcR54WY" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Tips & Shortcuts Section -->
+  <section id="tips">
+    <h2>💡 Tips & Shortcuts</h2>
+    <p>Here are some of the most useful Blender tips and keyboard shortcuts to speed up your workflow:</p>
+    
+    <div style="max-width:900px; margin:20px auto; text-align:left; background:rgba(255,255,255,0.1); padding:20px; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.5); line-height:1.8;">
+      <h3>🧭 Navigation</h3>
+      <ul>
+        <li><b>Middle Mouse Button (MMB)</b> – Rotate view</li>
+        <li><b>Shift + MMB</b> – Pan view</li>
+        <li><b>Scroll Wheel</b> – Zoom in/out</li>
+        <li><b>NumPad 1/3/7</b> – Front/Side/Top view</li>
+        <li><b>NumPad 5</b> – Toggle Perspective/Orthographic</li>
+      </ul>
+
+      <h3>🛠 Modeling</h3>
+      <ul>
+        <li><b>Tab</b> – Toggle Edit/Object Mode</li>
+        <li><b>A</b> – Select/Deselect all</li>
+        <li><b>B</b> – Box Select</li>
+        <li><b>C</b> – Circle Select</li>
+        <li><b>E</b> – Extrude</li>
+        <li><b>Ctrl + R</b> – Loop Cut</li>
+        <li><b>G</b> – Grab/Move</li>
+        <li><b>S</b> – Scale</li>
+        <li><b>R</b> – Rotate</li>
+        <li><b>Ctrl + Z</b> – Undo | <b>Shift + Ctrl + Z</b> – Redo</li>
+      </ul>
+
+      <h3>✂️ Editing</h3>
+      <ul>
+        <li><b>X / Delete</b> – Delete selected</li>
+        <li><b>F</b> – Create Face</li>
+        <li><b>Ctrl + J</b> – Join objects</li>
+        <li><b>P</b> – Separate selection into new object</li>
+        <li><b>M</b> – Move selection to new collection</li>
+      </ul>
+
+      <h3>🎞️ Animation</h3>
+      <ul>
+        <li><b>I</b> – Insert Keyframe</li>
+        <li><b>Alt + I</b> – Delete Keyframe</li>
+        <li><b>Shift + Left Arrow</b> – Jump to first frame</li>
+        <li><b>Shift + Right Arrow</b> – Jump to last frame</li>
+        <li><b>Spacebar</b> – Play/Pause animation</li>
+      </ul>
+
+      <h3>🚀 Rendering & Misc</h3>
+      <ul>
+        <li><b>F12</b> – Render Image</li>
+        <li><b>Ctrl + F12</b> – Render Animation</li>
+        <li><b>Shift + A</b> – Add new object</li>
+        <li><b>H</b> – Hide selection | <b>Alt + H</b> – Unhide all</li>
+        <li><b>Ctrl + S</b> – Save File</li>
+      </ul>
+
+      <h3>🌟 Pro Tips</h3>
+      <ul>
+        <li>Always use <b>Layers/Collections</b> to keep your scene organized.</li>
+        <li>Use <b>Modifiers</b> (Mirror, Subdivision, Boolean) for faster modeling.</li>
+        <li>Save frequently! Blender can crash sometimes.</li>
+        <li>Use <b>MatCap shading</b> (Viewport menu) for better modeling visibility.</li>
+        <li>Enable <b>Auto Save & Incremental Save</b> in Preferences.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Final Animated Message -->
+  <div class="final-message">
+    🌟 Best of Luck to Learn 3D Animation on Blender! 🌟
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Learn Blender | Designed for learners and creators</p>
+  </footer>
+</body>
+</html>
