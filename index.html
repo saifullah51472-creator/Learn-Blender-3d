@@ -61,7 +61,6 @@
       transform: scale(1.05) rotate(2deg);
     }
 
-    /* Download button styles */
     .download-btn {
       display: inline-block;
       margin-top: 30px;
@@ -116,14 +115,15 @@
       margin-top: 20px;
       border-radius: 15px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
     }
 
-    /* Tips section */
-    #tips ul {
+    #tips ul, #specs ul {
       text-align: left;
     }
 
-    /* Animated Final Message */
     .final-message {
       font-size: 2em;
       font-weight: bold;
@@ -147,6 +147,24 @@
       0% { text-shadow: 0 0 10px #fff, 0 0 20px #ffbe0b, 0 0 30px #ff006e; }
       100% { text-shadow: 0 0 20px #fff, 0 0 30px #8338ec, 0 0 40px #3a86ff; }
     }
+
+    @media screen and (max-width: 600px) {
+      iframe {
+        height: 200px;
+      }
+    }
+
+    /* Specs Box */
+    #specs div {
+      max-width: 900px;
+      margin: 20px auto;
+      text-align: left;
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      line-height: 1.8;
+    }
   </style>
 </head>
 <body>
@@ -159,63 +177,79 @@
       by creating stunning 3D scenes, characters, and animations. Start your journey today and 
       unlock your creative potential!
     </p>
-    <!-- Download Button -->
     <a href="https://www.blender.org/download/" target="_blank" class="download-btn">
       ⬇ Download Blender
     </a>
   </header>
 
-  <!-- Modeling Section -->
+  <!-- Sections -->
   <section id="modeling">
     <h2>🛠 Basic Modeling</h2>
     <p>Learn the basics of modeling with Blender.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z8sg0nHNTTo" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/Z8sg0nHNTTo" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- Editing Section -->
   <section id="editing">
     <h2>✂️ Editing</h2>
     <p>Editing is where you refine your models and add details.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/IgQB04NdqEI" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/IgQB04NdqEI" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- Texturing Section -->
   <section id="texturing">
     <h2>🎨 Texturing</h2>
     <p>Apply materials and textures to bring realism to your 3D models.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/uHCJoNEWjXo" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/uHCJoNEWjXo" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- Animation Section -->
   <section id="animation">
     <h2>🎞️ Animation</h2>
     <p>Bring your 3D creations to life with animations.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/d7-izSQO_-4" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/d7-izSQO_-4" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- Advanced Section -->
   <section id="advanced">
     <h2>🚀 Advanced Blender</h2>
     <p>Dive deeper into advanced Blender tools and workflows.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/4KV28Lkd2DU" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/4KV28Lkd2DU" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- Urdu Section -->
   <section id="urdu">
     <h2>🌙 Blender in Urdu</h2>
     <p>Learn Blender in Urdu for easy understanding.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/BgLYKrjgskU" frameborder="0" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/z6bxGcR54WY" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/BgLYKrjgskU" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/z6bxGcR54WY" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- Make Money Section -->
   <section id="make-money">
     <h2>💰 Make Money with Blender</h2>
     <p>Learn how to monetize your Blender skills by creating assets, freelancing, and selling your work online.</p>
-    
-    <!-- Video Links -->
-    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=r8swclfOuyI&t=8s" frameborder="0" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=7ar0hHJU8Jc" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/r8swclfOuyI?start=8" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/7ar0hHJU8Jc" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Blender System Specs -->
+  <section id="specs">
+    <h2>🖥 Blender 3D System Requirements</h2>
+    <div>
+      <h3>Minimum Requirements:</h3>
+      <ul>
+        <li><b>OS:</b> Windows 10 / macOS 10.13 / Linux</li>
+        <li><b>Processor:</b> 64-bit dual core CPU</li>
+        <li><b>Memory:</b> 8 GB RAM</li>
+        <li><b>Graphics:</b> Graphics card with 2 GB RAM, OpenGL 4.3 support</li>
+        <li><b>Storage:</b> 500 MB disk space</li>
+      </ul>
+
+      <h3>Recommended Requirements:</h3>
+      <ul>
+        <li><b>OS:</b> Windows 10 / macOS 10.13 / Linux</li>
+        <li><b>Processor:</b> Quad-core CPU 2.5 GHz or faster</li>
+        <li><b>Memory:</b> 16 GB RAM or more</li>
+        <li><b>Graphics:</b> Graphics card with 4 GB RAM, OpenGL 4.5 support or Vulkan</li>
+        <li><b>Storage:</b> SSD with 1 GB+ free disk space</li>
+        <li><b>Display:</b> Full HD resolution (1920×1080) or higher</li>
+      </ul>
+    </div>
   </section>
 
   <!-- Tips & Shortcuts Section -->
@@ -223,7 +257,7 @@
     <h2>💡 Tips & Shortcuts</h2>
     <p>Here are some of the most useful Blender tips and keyboard shortcuts to speed up your workflow:</p>
     
-    <div style="max-width:900px; margin:20px auto; text-align:left; background:rgba(255,255,255,0.1); padding:20px; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.5); line-height:1.8;">
+    <div>
       <h3>🧭 Navigation</h3>
       <ul>
         <li><b>Middle Mouse Button (MMB)</b> – Rotate view</li>
@@ -285,16 +319,12 @@
     </div>
   </section>
 
-  <!-- Final Animated Message -->
   <div class="final-message">
     🌟 Best of Luck to Learn 3D Animation on Blender! 🌟
   </div>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 Learn Blender | Designed for learners and creators</p>
   </footer>
 </body>
 </html>
-
-
