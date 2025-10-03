@@ -49,7 +49,7 @@
       height: 315px;
     }
 
-    /* Download button styles */
+    /* Download button */
     .download-btn {
       display: inline-block;
       margin-top: 30px;
@@ -100,12 +100,7 @@
       background: rgba(0,0,0,0.4);
     }
 
-    /* Tips section */
-    #tips ul {
-      text-align: left;
-    }
-
-    /* Animated Final Message */
+    /* Final Message */
     .final-message {
       font-size: 2em;
       font-weight: bold;
@@ -130,7 +125,7 @@
       100% { text-shadow: 0 0 20px #fff, 0 0 30px #8338ec, 0 0 40px #3a86ff; }
     }
 
-    /* Scroll-to-top button */
+    /* Scroll button */
     #scrollTopBtn {
       position: fixed;
       bottom: 20px;
@@ -149,7 +144,6 @@
       transition: transform 0.3s, opacity 0.3s;
       z-index: 9999;
     }
-
     #scrollTopBtn:hover {
       transform: scale(1.2) rotate(10deg);
       box-shadow: 0 6px 25px rgba(0,0,0,0.8);
@@ -166,7 +160,6 @@
       by creating stunning 3D scenes, characters, and animations. Start your journey today and 
       unlock your creative potential!
     </p>
-    <!-- Download Button -->
     <a href="https://www.blender.org/download/" target="_blank" class="download-btn">
       ⬇ Download Blender
     </a>
@@ -237,7 +230,7 @@
   <!-- Tips -->
   <section id="tips">
     <h2>💡 Tips & Shortcuts</h2>
-    <p>Here are some of the most useful Blender tips and keyboard shortcuts to speed up your workflow:</p>
+    <p>Here are the most useful Blender tips and keyboard shortcuts to speed up your workflow:</p>
     <div style="max-width:900px; margin:20px auto; text-align:left; background:rgba(255,255,255,0.1); padding:20px; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.5); line-height:1.8;">
       <h3>🧭 Navigation</h3>
       <ul>
@@ -246,6 +239,50 @@
         <li><b>Scroll</b> – Zoom</li>
         <li><b>NumPad 1/3/7</b> – Front/Side/Top view</li>
         <li><b>NumPad 5</b> – Toggle Perspective/Orthographic</li>
+      </ul>
+      <h3>🛠 Modeling</h3>
+      <ul>
+        <li><b>Tab</b> – Toggle Edit/Object Mode</li>
+        <li><b>A</b> – Select/Deselect all</li>
+        <li><b>B</b> – Box Select</li>
+        <li><b>C</b> – Circle Select</li>
+        <li><b>E</b> – Extrude</li>
+        <li><b>Ctrl + R</b> – Loop Cut</li>
+        <li><b>G</b> – Move</li>
+        <li><b>S</b> – Scale</li>
+        <li><b>R</b> – Rotate</li>
+      </ul>
+      <h3>✂️ Editing</h3>
+      <ul>
+        <li><b>X/Delete</b> – Delete</li>
+        <li><b>F</b> – Create Face</li>
+        <li><b>Ctrl + J</b> – Join</li>
+        <li><b>P</b> – Separate</li>
+        <li><b>M</b> – Move to Collection</li>
+      </ul>
+      <h3>🎞️ Animation</h3>
+      <ul>
+        <li><b>I</b> – Insert Keyframe</li>
+        <li><b>Alt + I</b> – Delete Keyframe</li>
+        <li><b>Shift + Left Arrow</b> – First frame</li>
+        <li><b>Shift + Right Arrow</b> – Last frame</li>
+        <li><b>Spacebar</b> – Play/Pause</li>
+      </ul>
+      <h3>🚀 Rendering & Misc</h3>
+      <ul>
+        <li><b>F12</b> – Render Image</li>
+        <li><b>Ctrl + F12</b> – Render Animation</li>
+        <li><b>Shift + A</b> – Add Object</li>
+        <li><b>H</b> – Hide | <b>Alt + H</b> – Unhide</li>
+        <li><b>Ctrl + S</b> – Save</li>
+      </ul>
+      <h3>🌟 Pro Tips</h3>
+      <ul>
+        <li>Use <b>Collections</b> to organize your scene.</li>
+        <li>Apply <b>Modifiers</b> like Mirror, Subdivision, Boolean.</li>
+        <li>Save frequently (enable Auto Save).</li>
+        <li>Use <b>MatCap shading</b> for better visibility.</li>
+        <li>Keep backups with Incremental Save.</li>
       </ul>
     </div>
   </section>
@@ -280,7 +317,5 @@
   </script>
 </body>
 </html>
-
-
 
 
