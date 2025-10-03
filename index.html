@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learn 3D Blender</title>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -16,6 +12,7 @@
       color: white;
       text-align: center;
       overflow-x: hidden;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -44,25 +41,12 @@
       animation: fadeInUp 3s ease-in-out;
     }
 
-    /* Responsive Video */
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 ratio */
-      height: 0;
-      overflow: hidden;
-      margin: 20px auto;
-      max-width: 900px;
+    iframe {
+      margin-top: 20px;
       border-radius: 15px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    }
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: 15px;
+      width: 560px;
+      height: 315px;
     }
 
     /* Download button styles */
@@ -146,39 +130,29 @@
       100% { text-shadow: 0 0 20px #fff, 0 0 30px #8338ec, 0 0 40px #3a86ff; }
     }
 
-    /* Specs Section */
-    .specs-box {
-      max-width: 900px;
-      margin: 30px auto;
-      text-align: left;
-      background: rgba(255,255,255,0.1);
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-      line-height: 1.8;
-    }
-
-    /* Scroll to Top Button */
+    /* Scroll-to-top button */
     #scrollTopBtn {
-      display: none;
       position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 99;
-      font-size: 18px;
+      bottom: 20px;
+      right: 20px;
+      font-size: 24px;
+      padding: 12px 18px;
       border: none;
-      outline: none;
-      background: linear-gradient(45deg, #ffbe0b, #ff006e, #3a86ff);
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ffbe0b, #ff006e, #8338ec, #3a86ff);
+      background-size: 300% 300%;
       color: white;
       cursor: pointer;
-      padding: 15px;
-      border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-      transition: all 0.3s ease;
+      display: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      animation: gradientMove 6s infinite;
+      transition: transform 0.3s, opacity 0.3s;
+      z-index: 9999;
     }
 
     #scrollTopBtn:hover {
-      transform: scale(1.2);
+      transform: scale(1.2) rotate(10deg);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.8);
     }
   </style>
 </head>
@@ -198,88 +172,81 @@
     </a>
   </header>
 
-  <!-- System Specs Section -->
-  <section id="specs">
-    <h2>💻 System Requirements for Blender</h2>
-    <div class="specs-box">
-      <h3>🔹 Minimum Requirements:</h3>
-      <ul>
-        <li>OS: Windows 10 / macOS 10.13 / Linux</li>
-        <li>CPU: Quad-core 64-bit, 2GHz</li>
-        <li>RAM: 8 GB</li>
-        <li>GPU: 2GB VRAM, OpenGL 4.3 support</li>
-        <li>Storage: 2 GB free space</li>
-      </ul>
-      <h3>🔹 Recommended Requirements:</h3>
-      <ul>
-        <li>OS: Windows 11 / Latest macOS / Linux</li>
-        <li>CPU: 8-core 64-bit, 3GHz or higher</li>
-        <li>RAM: 16–32 GB</li>
-        <li>GPU: 8GB+ VRAM (NVIDIA RTX / AMD RX series)</li>
-        <li>Storage: SSD with 10+ GB free</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Example Video Sections -->
+  <!-- Basic Sections -->
   <section id="modeling">
     <h2>🛠 Basic Modeling</h2>
     <p>Learn the basics of modeling with Blender.</p>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/Z8sg0nHNTTo" allowfullscreen></iframe>
-    </div>
+    <iframe src="https://www.youtube.com/embed/Z8sg0nHNTTo" frameborder="0" allowfullscreen></iframe>
   </section>
 
   <section id="editing">
     <h2>✂️ Editing</h2>
     <p>Editing is where you refine your models and add details.</p>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/IgQB04NdqEI" allowfullscreen></iframe>
-    </div>
+    <iframe src="https://www.youtube.com/embed/IgQB04NdqEI" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- Urdu Section -->
+  <section id="texturing">
+    <h2>🎨 Texturing</h2>
+    <p>Apply materials and textures to bring realism to your 3D models.</p>
+    <iframe src="https://www.youtube.com/embed/uHCJoNEWjXo" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section id="animation">
+    <h2>🎞️ Animation</h2>
+    <p>Bring your 3D creations to life with animations.</p>
+    <iframe src="https://www.youtube.com/embed/d7-izSQO_-4" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section id="advanced">
+    <h2>🚀 Advanced Blender</h2>
+    <p>Dive deeper into advanced Blender tools and workflows.</p>
+    <iframe src="https://www.youtube.com/embed/4KV28Lkd2DU" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Urdu -->
   <section id="urdu">
     <h2>🌙 Blender in Urdu</h2>
     <p>Learn Blender in Urdu for easy understanding.</p>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/BgLYKrjgskU" allowfullscreen></iframe>
-    </div>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/z6bxGcR54WY" allowfullscreen></iframe>
-    </div>
+    <iframe src="https://www.youtube.com/embed/BgLYKrjgskU" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/z6bxGcR54WY" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- Make Money Section -->
+  <!-- Make Money -->
   <section id="make-money">
     <h2>💰 Make Money with Blender</h2>
     <p>Learn how to monetize your Blender skills by creating assets, freelancing, and selling your work online.</p>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/r8swclfOuyI?start=8" allowfullscreen></iframe>
-    </div>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/7ar0hHJU8Jc" allowfullscreen></iframe>
-    </div>
+    <iframe src="https://www.youtube.com/embed/r8swclfOuyI" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/7ar0hHJU8Jc" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- Full Courses Section -->
+  <!-- Full Courses -->
   <section id="full-courses">
     <h2>📚 Full Blender Courses</h2>
-    <p>Complete playlists to learn Blender step by step from beginner to advanced.</p>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/videoseries?list=PL0Vp2NRKp-DK_DuG7vk7gQqHLbxDgGpev" allowfullscreen></iframe>
-    </div>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/videoseries?list=PLULbDkdbO4tr_lzcyuZVHFlqcAc2-1_uG" allowfullscreen></iframe>
-    </div>
+    <p>Watch complete playlists to learn Blender step by step.</p>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL0Vp2NRKp-DK_DuG7vk7gQqHLbxDgGpev" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLULbDkdbO4tr_lzcyuZVHFlqcAc2-1_uG" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- Physics Section -->
+  <!-- Physics Animation -->
   <section id="physics">
-    <h2>⚡ Physics Animation in Blender</h2>
-    <p>Learn physics-based animation like cloth, fluids, smoke, and rigid body simulations.</p>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/videoseries?list=PL0Vp2NRKp-DJ9vuBUE_Lyj8z5n-nR68hO" allowfullscreen></iframe>
+    <h2>⚡ Learn Physics Animation</h2>
+    <p>Master physics-based animation techniques in Blender.</p>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL0Vp2NRKp-DJ9vuBUE_Lyj8z5n-nR68hO" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Tips -->
+  <section id="tips">
+    <h2>💡 Tips & Shortcuts</h2>
+    <p>Here are some of the most useful Blender tips and keyboard shortcuts to speed up your workflow:</p>
+    <div style="max-width:900px; margin:20px auto; text-align:left; background:rgba(255,255,255,0.1); padding:20px; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.5); line-height:1.8;">
+      <h3>🧭 Navigation</h3>
+      <ul>
+        <li><b>MMB</b> – Rotate view</li>
+        <li><b>Shift + MMB</b> – Pan view</li>
+        <li><b>Scroll</b> – Zoom</li>
+        <li><b>NumPad 1/3/7</b> – Front/Side/Top view</li>
+        <li><b>NumPad 5</b> – Toggle Perspective/Orthographic</li>
+      </ul>
     </div>
   </section>
 
@@ -293,30 +260,27 @@
     <p>© 2025 Learn Blender | Designed for learners and creators</p>
   </footer>
 
-  <!-- Scroll Top Button -->
-  <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">⬆</button>
+  <!-- Scroll-to-top Button -->
+  <button id="scrollTopBtn">⬆</button>
 
   <script>
-    // Scroll to top button functionality
-    let mybutton = document.getElementById("scrollTopBtn");
-
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        mybutton.style.display = "block";
+    let scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function() {
+      if (document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+        scrollBtn.style.opacity = "1";
       } else {
-        mybutton.style.display = "none";
+        scrollBtn.style.opacity = "0";
+        setTimeout(()=> scrollBtn.style.display="none", 300);
       }
-    }
-
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
+    };
+    scrollBtn.onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    };
   </script>
 </body>
 </html>
+
 
 
 
